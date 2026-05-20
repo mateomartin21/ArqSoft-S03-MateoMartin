@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using Catalogo.Domain.Models;
 using CatalogoApp.Domain.Interfaces;
-using CatalogoApp.Domain.Models;
 
-    namespace CatalogoApp.Application.Services
+namespace Catalogo.Application.Services
     {
     public class ItemService
     {
@@ -41,17 +40,17 @@ using CatalogoApp.Domain.Models;
         }
 
         // Método útil para el filtro por categoría/género
-        public List<Item> ObtenerPorGenero(string genero)
+        public List<Item> ObtenerPorTipo(string tipo)
         {
             return _repo.ObtenerTodos()
-                        .Where(i => i.Genero == genero)
+                        .Where(i => i.Tipo == tipo)
                         .ToList();
         }
 
-        public List<string> ObtenerGeneros()
+        public List<string> ObtenerTipos()
         {
             return _repo.ObtenerTodos()
-                        .Select(i => i.Genero)
+                        .Select(i => i.Tipo)
                         .Distinct()
                         .ToList();
         }

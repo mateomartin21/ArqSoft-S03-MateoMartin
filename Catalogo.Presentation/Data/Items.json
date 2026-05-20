@@ -1,0 +1,29 @@
+[
+  {
+    "Id": 1,
+    "Nombre": null,
+    "Generacion": null,
+    "Tipo": null,
+    "Rutas": null,
+    "Descripcion": "Dante, cazador de demonios, enfrenta a Mundus.",
+    "ImagenUrl": null
+  },
+  {
+    "Id": 2,
+    "Nombre": null,
+    "Generacion": null,
+    "Tipo": null,
+    "Rutas": null,
+    "Descripcion": null,
+    "ImagenUrl": null
+  },
+  {
+    "Id": 3,
+    "Nombre": "asdasds",
+    "Generacion": null,
+    "Tipo": null,
+    "Rutas": null,
+    "Descripcion": null,
+    "ImagenUrl": null
+  }
+]

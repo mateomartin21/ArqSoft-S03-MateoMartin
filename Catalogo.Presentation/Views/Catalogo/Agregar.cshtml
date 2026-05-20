@@ -1,0 +1,48 @@
+﻿@model Catalogo.Domain.Models.Item
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="pokedex-card-header">
+            <h2 class="mb-0">Registrar Nuevo Pokémon</h2>
+        </div>
+        
+        <div class="card-body p-4">
+            <form asp-action="Agregar" method="post">
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Nombre</label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Ej: Pikachu" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Tipo</label>
+                    <input asp-for="Tipo" class="form-control" placeholder="Ej: Eléctrico" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Generación</label>
+                    <input asp-for="Generacion" class="form-control" placeholder="Ej: Primera" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Hábitat / Rutas</label>
+                    <input asp-for="Rutas" class="form-control" placeholder="Ruta 1, Cueva Oscura..." />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">URL de la Imagen (Opcional)</label>
+                    <input asp-for="ImagenUrl" class="form-control" placeholder="https://ejemplo.com/imagen.png" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Descripción Pokédex</label>
+                    <textarea asp-for="Descripcion" class="form-control" rows="3" placeholder="Escribe la entrada de la Pokédex..."></textarea>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-poke-add border-0">Guardar en Pokédex</button>
+                    <a asp-action="Index" class="btn btn-outline-secondary btn-lg ms-2">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

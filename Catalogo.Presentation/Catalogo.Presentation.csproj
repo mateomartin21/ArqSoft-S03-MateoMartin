@@ -11,4 +11,10 @@
     <ProjectReference Include="..\Catalogo.Infrastructure\Catalogo.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Data\Items.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

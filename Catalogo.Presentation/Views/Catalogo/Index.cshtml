@@ -1,0 +1,52 @@
+﻿@model List<Catalogo.Domain.Models.Item>
+
+<div class="container mt-4">
+    <h1 class="pokedex-title"><i class="bi bi-phone"></i> Mi Pokédex</h1>
+
+    <div class="d-flex justify-content-center flex-wrap mb-4">
+        <a asp-action="Index" class="btn btn-outline-dark btn-sm m-1 fw-bold">Todos</a>
+        @if (ViewBag.Tipos != null)
+        {
+            foreach (var tipo in ViewBag.Tipos as List<string>)
+            {
+                <a asp-action="Index" asp-route-tipo="@tipo" class="btn btn-outline-danger btn-sm m-1">@tipo</a>
+            }
+        }
+    </div>
+
+    <hr />
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="poke-card">
+                    @if (!string.IsNullOrEmpty(item.ImagenUrl))
+                    {
+                        <img src="@item.ImagenUrl" class="poke-img" alt="@item.Nombre">
+                    }
+                    else
+                    {
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" class="poke-img poke-img-empty" alt="Sin imagen">
+                    }
+
+                    <div class="card-body text-center">
+                        <div class="text-muted small mb-1">N.º @item.Id</div>
+                        <h5 class="fw-bold text-uppercase">@item.Nombre</h5>
+                        
+                        <span class="badge bg-secondary mb-2">@item.Tipo</span>
+                        <p class="text-muted small">Generación: @item.Generacion</p>
+                        
+                        <a asp-action="Detalle" asp-route-id="@item.Id" class="btn btn-poke-action">Ver Datos</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <hr class="mt-5" />
+
+    <div class="text-center mb-5">
+        <a asp-action="Agregar" class="btn btn-poke-add">+ Registrar Nuevo Pokémon</a>
+    </div>
+</div>

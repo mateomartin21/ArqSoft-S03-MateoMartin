@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-using CatalogoApp.Domain.Models;
+using Catalogo.Domain.Models;
 
 namespace CatalogoApp.Domain.Interfaces
 {

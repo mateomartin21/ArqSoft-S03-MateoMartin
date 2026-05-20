@@ -1,0 +1,42 @@
+﻿
+
+<div class="container">
+    <div class="card poke-detail-container">
+        
+        <div class="pokedex-card-header">
+            <h4 class="mb-0">Datos del Pokémon #@Model.Id</h4>
+        </div>
+        
+        <div class="card-body text-center">
+            @if (!string.IsNullOrEmpty(Model.ImagenUrl))
+            {
+                <img src="@Model.ImagenUrl" alt="@Model.Nombre" class="img-fluid poke-detail-img" />
+            }
+            else
+            {
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg" alt="Sin imagen" class="img-fluid poke-detail-img poke-img-empty" />
+            }
+
+            <h1 class="fw-bold text-uppercase mb-4">@Model.Nombre</h1>
+            
+            <hr />
+
+            <div class="fs-5 text-start px-4">
+                <p><strong>Tipo:</strong> <span class="badge bg-secondary">@Model.Tipo</span></p>
+                <p><strong>Generación:</strong> @Model.Generacion</p>
+                <p><strong>Hábitat/Rutas:</strong> @Model.Rutas</p>
+                
+                <div class="mt-4">
+                    <strong>Descripción de la Pokedex:</strong>
+                    <div class="poke-desc-box">
+                        "@Model.Descripcion"
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer text-center bg-white">
+            <a asp-action="Index" class="btn btn-outline-danger fw-bold">&larr; Volver a la Pokédex</a>
+        </div>
+    </div>
+</div>
