@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Registro";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h2 class="mb-4">Crear Nueva Cuenta</h2>
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger">@ViewBag.Error</div>
+            }
+
+            <form asp-action="Register" method="post" class="card p-4 shadow-sm">
+                <div class="mb-3">
+                    <input type="text" name="username" class="form-control" placeholder="Elige un nombre de usuario" required />
+                </div>
+                <div class="mb-3">
+                    <input type="password" name="password" class="form-control" placeholder="Crea una contraseña" required />
+                </div>
+                <button type="submit" class="btn btn-danger w-100">Registrarme</button>
+            </form>
+        </div>
+    </div>
+</div>
