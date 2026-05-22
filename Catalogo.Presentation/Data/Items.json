@@ -1,29 +1,101 @@
 [
   {
     "Id": 1,
-    "Nombre": null,
-    "Generacion": null,
-    "Tipo": null,
-    "Rutas": null,
-    "Descripcion": "Dante, cazador de demonios, enfrenta a Mundus.",
-    "ImagenUrl": null
+    "Nombre": "Bulbasaur",
+    "Generacion": "Primera",
+    "Tipo": "Planta",
+    "Rutas": "Pueblo Paleta, Ruta 1",
+    "Descripcion": "Este Pok\u00E9mon nace con una semilla en el lomo que brota con el tiempo.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
   },
   {
-    "Id": 2,
-    "Nombre": null,
-    "Generacion": null,
-    "Tipo": null,
-    "Rutas": null,
-    "Descripcion": null,
-    "ImagenUrl": null
+    "Id": 4,
+    "Nombre": "Charmander",
+    "Generacion": "Primera",
+    "Tipo": "Fuego",
+    "Rutas": "Ruta 24, T\u00FAnel Roca",
+    "Descripcion": "La llama de su cola indica su salud y estado de \u00E1nimo.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
   },
   {
-    "Id": 3,
-    "Nombre": "asdasds",
-    "Generacion": null,
-    "Tipo": null,
-    "Rutas": null,
+    "Id": 7,
+    "Nombre": "Squirtle",
+    "Generacion": "Primera",
+    "Tipo": "Agua",
+    "Rutas": "Ruta 25, Islas Espuma",
+    "Descripcion": "Su caparaz\u00F3n no solo lo protege, sino que reduce la resistencia al nadar.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+  },
+  {
+    "Id": 25,
+    "Nombre": "Pikachu",
+    "Generacion": "Primera",
+    "Tipo": "El\u00E9ctrico",
+    "Rutas": "Bosque Verde",
+    "Descripcion": "Cuando se enfada, libera energ\u00EDa el\u00E9ctrica de las bolsas de sus mejillas.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+  },
+  {
+    "Id": 133,
+    "Nombre": "Eevee",
+    "Generacion": "Primera",
+    "Tipo": "Normal",
+    "Rutas": "Ruta 17, Ciudad Azulona",
+    "Descripcion": "Tiene una composici\u00F3n gen\u00E9tica irregular que le permite evolucionar de muchas formas.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png"
+  },
+  {
+    "Id": 152,
+    "Nombre": "Chikorita",
+    "Generacion": "Segunda",
+    "Tipo": "Planta",
+    "Rutas": "Ruta 29, Ruta 30",
+    "Descripcion": "Le encanta tomar el sol. Usa la hoja de su cabeza para buscar sitios c\u00E1lidos.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/152.png"
+  },
+  {
+    "Id": 155,
+    "Nombre": "Cyndaquil",
+    "Generacion": "Segunda",
+    "Tipo": "Fuego",
+    "Rutas": "Cueva Oscura",
+    "Descripcion": "Es t\u00EDmido. Si se asusta, las llamas de su lomo arden con m\u00E1s fuerza.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/155.png"
+  },
+  {
+    "Id": 158,
+    "Nombre": "Totodile",
+    "Generacion": "Segunda",
+    "Tipo": "Agua",
+    "Rutas": "Lago de la Furia",
+    "Descripcion": "Tiene la costumbre de morder todo lo que se mueve con sus fuertes mand\u00EDbulas.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/158.png"
+  },
+  {
+    "Id": 280,
+    "Nombre": "Ralts",
+    "Generacion": "Tercera",
+    "Tipo": "Ps\u00EDquico",
+    "Rutas": "Ruta 102",
+    "Descripcion": "Percibe las emociones humanas con los cuernos rojos de su cabeza.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/280.png"
+  },
+  {
+    "Id": 448,
+    "Nombre": "Lucario",
+    "Generacion": "Cuarta",
+    "Tipo": "Lucha",
+    "Rutas": "Cueva Retorno",
+    "Descripcion": "Puede leer los pensamientos y movimientos de su adversario a trav\u00E9s de su aura.",
+    "ImagenUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png"
+  },
+  {
+    "Id": 449,
+    "Nombre": "Gengar",
+    "Generacion": "Primera",
+    "Tipo": "Fantasma",
+    "Rutas": "Pueblo Lavanda",
     "Descripcion": null,
-    "ImagenUrl": null
+    "ImagenUrl": "https://th.bing.com/th/id/R.cba3fc0f60bf6e9b64b90f3d24b4308a?rik=FAur6o%2fc7z0zrw\u0026riu=http%3a%2f%2forig04.deviantart.net%2f9411%2ff%2f2015%2f153%2ff%2ff%2f094_gengar_by_rayo123000-d8vpl5g.png\u0026ehk=jKEV81xdRmDKzcVi5KCNNXZ5%2fOoiPQX3AQmlZ%2fZGd5A%3d\u0026risl=\u0026pid=ImgRaw\u0026r=0"
   }
 ]

@@ -1,8 +1,41 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Bienvenido";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container d-flex align-items-center justify-content-center welcome-wrapper">
+    <div class="card shadow-lg border-0 overflow-hidden welcome-card">
+        <div class="row g-0">
+            <div class="col-md-1 bg-danger d-none d-md-block"></div>
+
+            <div class="col-md-11">
+                <div class="card-body p-5 text-center">
+
+                    <div class="mb-4">
+                        <img src="https://images.wikidexcdn.net/mwuploads/wikidex/4/4d/latest/20160602181254/RotomDex.png" class="rotom-floating-img" alt="Rotom">
+                    </div>
+
+                    <h1 class="display-4 fw-bold text-dark mb-3">¡Bienvenido a tu <span class="text-danger">Pokédex</span>!</h1>
+
+                    <p class="lead text-muted px-lg-5">
+                        Soy Rotom, tu terminal de investigación personal. Estoy listo para gestionar, analizar y organizar tu colección de Pokémon.
+                    </p>
+
+                    <hr class="my-4 mx-auto welcome-divider">
+
+                    <div class="row mb-4 text-secondary small text-uppercase fw-bold">
+                        <div class="col-4 border-end">Generaciones</div>
+                        <div class="col-4 border-end">Rutas</div>
+                        <div class="col-4">Tipos</div>
+                    </div>
+
+                    <p class="mb-4">Accede a la base de datos completa y mantén tu registro al 100%.</p>
+
+                    <a class="btn-welcome" asp-controller="Catalogo" asp-action="Index" role="button">
+                        INICIAR ROTOMDEX &rarr;
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

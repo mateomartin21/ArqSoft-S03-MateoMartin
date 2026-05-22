@@ -26,7 +26,11 @@ namespace CatalogoApp.Infrastructure.Repositories
                 return new List<Item>();
 
             var json = File.ReadAllText(_filePath);
-            return JsonSerializer.Deserialize<List<Item>>(json)
+            var opciones = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true  // ← agrega esto
+            };
+            return JsonSerializer.Deserialize<List<Item>>(json, opciones)
                    ?? new List<Item>();
         }
 
