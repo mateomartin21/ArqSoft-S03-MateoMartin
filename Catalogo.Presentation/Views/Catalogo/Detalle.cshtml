@@ -1,12 +1,13 @@
-﻿
+﻿@*  *@
+@using CatalogoApp.Presentation.Controllers
 
 <div class="container">
-    <div class="card poke-detail-container">
-        
+    <div class="card poke-detail-container mb-4">
+
         <div class="pokedex-card-header">
             <h4 class="mb-0">Datos del Pokémon #@Model.Id</h4>
         </div>
-        
+
         <div class="card-body text-center">
             @if (!string.IsNullOrEmpty(Model.ImagenUrl))
             {
@@ -18,14 +19,14 @@
             }
 
             <h1 class="fw-bold text-uppercase mb-4">@Model.Nombre</h1>
-            
+
             <hr />
 
             <div class="fs-5 text-start px-4">
                 <p><strong>Tipo:</strong> <span class="badge bg-secondary">@Model.Tipo</span></p>
                 <p><strong>Generación:</strong> @Model.Generacion</p>
                 <p><strong>Hábitat/Rutas:</strong> @Model.Rutas</p>
-                
+
                 <div class="mt-4">
                     <strong>Descripción de la Pokedex:</strong>
                     <div class="poke-desc-box">
@@ -37,6 +38,57 @@
 
         <div class="card-footer text-center bg-white">
             <a asp-action="Index" class="btn btn-outline-danger fw-bold">&larr; Volver a la Pokédex</a>
+        </div>
+    </div>
+
+    <div class="card poke-detail-container p-4 shadow-sm">
+        <h3 class="mb-4"><i class="fa-solid fa-comments text-danger"></i> Reseñas de Entrenadores</h3>
+
+        @if (User.Identity is { IsAuthenticated: true })
+        {
+            <div class="card p-3 shadow-sm mb-4" style="background-color: #f8f9fa; border: 1px solid #e9ecef;">
+                <h5 class="text-danger fw-bold">Deja tu opinión como @User.Identity.Name</h5>
+                <form asp-controller="Catalogo" asp-action="AgregarComentario" method="post">
+
+                    <input type="hidden" name="pokemonId" value="@Model.Id" />
+
+                    <div class="mb-3 mt-2">
+                        <textarea name="texto" class="form-control" rows="3" placeholder="¿Qué opinas de este Pokémon en combate o diseño?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger fw-bold">Publicar reseña</button>
+                </form>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-warning text-center shadow-sm mb-4">
+                <i class="fa-solid fa-lock"></i> Debes <a asp-controller="Cuenta" asp-action="Login" class="fw-bold text-danger text-decoration-none">iniciar sesión</a> para dejar una reseña en la Rotomdex.
+            </div>
+        }
+
+        <div class="comments-list mt-3">
+            @{
+                // Extraemos los comentarios que mandamos desde el controlador
+                var comentarios = ViewBag.Comentarios as List<Catalogo.Presentation.Models.Comentario>;
+            }
+
+            @if (comentarios != null && comentarios.Any())
+            {
+                foreach (var comentario in comentarios)
+                {
+                    <div class="card p-3 mb-3 border-0 shadow-sm" style="background-color: #ffffff; border-left: 4px solid #dc3545 !important;">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <strong class="text-danger fs-5">@@@comentario.Usuario</strong>
+                            <small class="text-muted">@comentario.Fecha.ToString("dd/MM/yyyy HH:mm")</small>
+                        </div>
+                        <p class="mb-0 text-dark" style="font-size: 1.05rem;">@comentario.Texto</p>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted text-center py-4"><i>Nadie ha documentado nada sobre este Pokémon todavía. ¡Sé el primero!</i></p>
+            }
         </div>
     </div>
 </div>

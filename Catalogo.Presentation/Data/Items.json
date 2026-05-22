@@ -97,5 +97,23 @@
     "Rutas": "Pueblo Lavanda",
     "Descripcion": null,
     "ImagenUrl": "https://th.bing.com/th/id/R.cba3fc0f60bf6e9b64b90f3d24b4308a?rik=FAur6o%2fc7z0zrw\u0026riu=http%3a%2f%2forig04.deviantart.net%2f9411%2ff%2f2015%2f153%2ff%2ff%2f094_gengar_by_rayo123000-d8vpl5g.png\u0026ehk=jKEV81xdRmDKzcVi5KCNNXZ5%2fOoiPQX3AQmlZ%2fZGd5A%3d\u0026risl=\u0026pid=ImgRaw\u0026r=0"
+  },
+  {
+    "Id": 450,
+    "Nombre": "Kyogre",
+    "Generacion": "Tercera",
+    "Tipo": "Agua",
+    "Rutas": "\u00D3ceano",
+    "Descripcion": "kyogre god",
+    "ImagenUrl": "https://www.pngmart.com/files/22/Kyogre-Pokemon-PNG-File.png"
+  },
+  {
+    "Id": 451,
+    "Nombre": "Shaymin",
+    "Generacion": "erizo",
+    "Tipo": "Tierra",
+    "Rutas": "bosque, naturaleza",
+    "Descripcion": "es un erizo con una florcita y es verde, es de tipo planta. gracias",
+    "ImagenUrl": "https://images.wikidexcdn.net/mwuploads/wikidex/thumb/8/86/latest/20150601121800/Shaymin_tierra.png/300px-Shaymin_tierra.png"
   }
 ]
